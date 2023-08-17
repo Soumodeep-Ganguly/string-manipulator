@@ -1,0 +1,27 @@
+{
+  "name": "string-manipulator",
+  "version": "1.0.0",
+  "description": "Makes working with strings easy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soumodeep-Ganguly/string-manipulator.git"
+  },
+  "keywords": [
+    "npm",
+    "string manupulator"
+  ],
+  "author": "Soumodeep-Ganguly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Soumodeep-Ganguly/string-manipulator/issues"
+  },
+  "homepage": "https://github.com/Soumodeep-Ganguly/string-manipulator#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
