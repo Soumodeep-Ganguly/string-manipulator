@@ -12,7 +12,11 @@
   },
   "keywords": [
     "npm",
-    "string manupulator"
+    "string manupulator",
+    "string transformation",
+    "string formatter",
+    "string format",
+    "string manupulation"
   ],
   "author": "Soumodeep-Ganguly",
   "license": "MIT",
