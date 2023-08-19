@@ -1,6 +1,6 @@
 {
   "name": "string-transformation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Makes working with strings easy.",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,8 @@
   },
   "keywords": [
     "npm",
-    "string manipulator",
     "string transformation",
+    "string manipulator",
     "string formatter",
     "string format",
     "string manupulation"

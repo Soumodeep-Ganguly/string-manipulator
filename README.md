@@ -1,18 +1,18 @@
-# String Manipulator
+# String Transformation
 
-A JavaScript module for performing various string manipulation tasks.
-To install this module run command `npm i string-manipulator`
+A JavaScript module for performing various string transformation tasks.
+To install this module run command `npm i string-transformation`
 
 ## Import Module
 ```javascript
-const stringUtil = require('string-manipulator');
+const stringUtil = require('string-transformation');
 stringUtil.stringLength(str);
 ```
 
 OR
 
 ```javascript
-const { stringLength } = require('string-manipulator');
+const { stringLength } = require('string-transformation');
 ```
 
 ## Functions
