@@ -1,5 +1,5 @@
 {
-  "name": "string-manipulator",
+  "name": "string-transformation",
   "version": "1.0.0",
   "description": "Makes working with strings easy.",
   "main": "index.js",
