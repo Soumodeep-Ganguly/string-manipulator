@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Soumodeep-Ganguly/string-manipulator.git"
+    "url": "git+https://github.com/Soumodeep-Ganguly/string-transformation.git"
   },
   "keywords": [
     "npm",
-    "string manupulator",
+    "string manipulator",
     "string transformation",
     "string formatter",
     "string format",
@@ -21,9 +21,9 @@
   "author": "Soumodeep-Ganguly",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Soumodeep-Ganguly/string-manipulator/issues"
+    "url": "https://github.com/Soumodeep-Ganguly/string-transformation/issues"
   },
-  "homepage": "https://github.com/Soumodeep-Ganguly/string-manipulator#readme",
+  "homepage": "https://github.com/Soumodeep-Ganguly/string-transformation#readme",
   "devDependencies": {
     "chai": "^4.3.7",
     "mocha": "^10.2.0"
