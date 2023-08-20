@@ -352,3 +352,281 @@ decodeBase64('SGVsbG8sIFdvcmxkIQ==');
 ```javascript
 Hello, World!
 ```
+
+### `matchRegex(str, regex)`
+
+Returns an array of all occurrences of a given regular expression pattern in a string.
+
+**Input:**
+```javascript
+matchRegex('abc123def456', /\d+/g);
+```
+
+**Output:**
+```javascript
+["123", "456"]
+```
+
+### `replaceRegex(str, regex, replacement)`
+
+Replaces occurrences of a given regular expression pattern with a specified replacement in a string.
+
+**Input:**
+```javascript
+replaceRegex('abc123def456', /\d+/g, 'X');
+```
+
+**Output:**
+```javascript
+abcXdefX
+```
+
+### `encodeURIComponent(str)`
+
+Encodes a string for safe use in a URL.
+
+**Input:**
+```javascript
+encodeURIComponent('Hello, World!');
+```
+
+**Output:**
+```javascript
+Hello%2C%20World!
+```
+
+### `decodeURIComponent(str)`
+
+Decodes a URL-encoded string back to its original form.
+
+**Input:**
+```javascript
+decodeURIComponent('Hello%2C%20World%21');
+```
+
+**Output:**
+```javascript
+Hello, World!
+```
+
+### `getPathFromURL(url)`
+
+Extracts the path portion from a given URL.
+
+**Input:**
+```javascript
+getPathFromURL('https://example.com/path/file.html');
+```
+
+**Output:**
+```javascript
+/path/file.html
+```
+
+### `compareStrings(str1, str2)`
+
+Compares two strings lexicographically and returns a comparison result.
+
+**Input:**
+```javascript
+compareStrings('apple', 'banana');
+```
+
+**Output:**
+```javascript
+-1
+```
+
+### `equalsIgnoreCase(str1, str2)`
+
+Checks if two strings are equal, ignoring their case.
+
+**Input:**
+```javascript
+equalsIgnoreCase('hello', 'Hello');
+```
+
+**Output:**
+```javascript
+true
+```
+
+### `formatString(format, ...values)`
+
+Formats a string using placeholders and corresponding values.
+
+**Input:**
+```javascript
+formatString('Hello, {0}!', 'World');
+```
+
+**Output:**
+```javascript
+Hello, World!
+```
+
+**Input:**
+```javascript
+formatString('Hello {0}, Hello {1}!', 'there', 'World');
+```
+
+**Output:**
+```javascript
+Hello there, Hello World!
+```
+
+### `getUnicodeCodePointAt(str, index)`
+
+Retrieves the Unicode code point at a specific position in a string.
+
+**Input:**
+```javascript
+getUnicodeCodePointAt('A', 0);
+```
+
+**Output:**
+```javascript
+65
+```
+
+### `convertToUnicode(str)`
+
+Converts a string to a sequence of Unicode code points.
+
+**Input:**
+```javascript
+convertToUnicode('Hello');
+```
+
+**Output:**
+```javascript
+U+48 U+65 U+6c U+6c U+6f
+```
+
+### `truncateText(str, maxLength, ellipsis)`
+
+Truncates a string to a specified length with an optional ellipsis.
+
+**Input:**
+```javascript
+truncateText('Lorem ipsum dolor sit amet', 15);
+```
+
+**Output:**
+```javascript
+Lorem ipsum dol...
+```
+
+### `normalizeWhitespace(str)`
+
+Replaces consecutive whitespace characters with a single space.
+
+**Input:**
+```javascript
+normalizeWhitespace('  Hello    World!   ');
+```
+
+**Output:**
+```javascript
+ Hello World! 
+```
+
+### `collapseWhitespace(str)`
+
+Removes all whitespace characters from a string.
+
+**Input:**
+```javascript
+collapseWhitespace('Hello   World!');
+```
+
+**Output:**
+```javascript
+HelloWorld! 
+```
+
+### `getCharacterType(char)`
+
+Determines the type of a character (uppercase, lowercase, digit, etc.).
+
+**Input:**
+```javascript
+getCharacterType('A');
+```
+
+**Output:**
+```javascript
+uppercase 
+```
+
+### `getCharacterCode(char)`
+
+Retrieves the Unicode code point of a character.
+
+**Input:**
+```javascript
+getCharacterCode('A');
+```
+
+**Output:**
+```javascript
+65 
+```
+
+### `padWithContent(str, padContent, totalLength)`
+
+Pads a string with a specified content to achieve a desired length.
+
+**Input:**
+```javascript
+padWithContent('Hello', '*', 10);
+```
+
+**Output:**
+```javascript
+**Hello***
+```
+
+### `convertToCamelCase(str)`
+
+Converts a string to camel case format.
+
+**Input:**
+```javascript
+convertToCamelCase('hello-world');
+```
+
+**Output:**
+```javascript
+helloWorld
+```
+
+### `convertToSnakeCase(str)`
+
+Converts a string to snake case format.
+
+**Input:**
+```javascript
+convertToSnakeCase('helloWorld');
+```
+
+**Output:**
+```javascript
+hello_world
+```
+
+### `wrapText(text, maxWidth)`
+
+Wraps a long text string into multiple lines with a specified maximum width.
+
+**Input:**
+```javascript
+wrapText('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 20);
+```
+
+**Output:**
+```javascript
+Lorem ipsum dolor sit
+amet, consectetur
+adipiscing elit.
+```

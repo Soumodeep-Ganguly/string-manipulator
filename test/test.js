@@ -97,4 +97,86 @@ describe('String Utils', () => {
     it('decodeBase64 should decode the base64 to string', () => {
         assert.equal(stringUtils.decodeBase64('SGVsbG8sIFdvcmxkIQ=='), "Hello, World!");
     });
+
+    it('matchRegex returns an array of all occurrences of a given regular expression pattern in a string', () => {
+        assert.deepEqual(stringUtils.matchRegex('abc123def456', /\d+/g), ["123", "456"]);
+    });
+
+    it('replaceRegex replaces occurrences of a given regular expression pattern with a specified replacement in a string.', () => {
+        assert.equal(stringUtils.replaceRegex('abc123def456', /\d+/g, 'X'), "abcXdefX");
+    });
+
+    it('encodeURIComponent encodes a string for safe use in a URL', () => {
+        assert.strictEqual(stringUtils.encodeURIComponent('Hello, World!'), "Hello%2C%20World!");
+    });
+
+    it('decodeURIComponent decodes a URL-encoded string back to its original form', () => {
+        assert.equal(stringUtils.decodeURIComponent('Hello%2C%20World%21'), "Hello, World!");
+    });
+
+    it('getPathFromURL extracts the path portion from a given URL', () => {
+        assert.equal(stringUtils.getPathFromURL('https://example.com/path/file.html'), "/path/file.html");
+    });
+
+    it('compareStrings compares two strings lexicographically and returns a comparison result.', () => {
+        assert.equal(stringUtils.compareStrings('apple', 'banana'), -1);
+    });
+
+    it('equalsIgnoreCase checks if two strings are equal, ignoring their case', () => {
+        assert.equal(stringUtils.equalsIgnoreCase('hello', 'Hello'), true);
+    });
+
+    it('formatString formats a string using placeholders and corresponding values.', () => {
+        assert.equal(stringUtils.formatString('Hello, {0}!', 'World'), "Hello, World!");
+    });
+
+    it('getUnicodeCodePointAt retrieves the Unicode code point at a specific position in a string.', () => {
+        assert.equal(stringUtils.getUnicodeCodePointAt('Hello', 1), 101);
+    });
+
+    it('convertToUnicode converts a string to a sequence of Unicode code points.', () => {
+        assert.equal(stringUtils.convertToUnicode('Hello'), "U+48 U+65 U+6c U+6c U+6f");
+    });
+
+    it('truncateText truncates a string to a specified length with an optional ellipsis.', () => {
+        assert.strictEqual(stringUtils.truncateText('Lorem ipsum dolor sit amet', 15), "Lorem ipsum dol...");
+    });
+
+    it('normalizeWhitespace replaces consecutive whitespace characters with a single space.', () => {
+        assert.equal(stringUtils.normalizeWhitespace('  Hello    World!   '), " Hello World! ");
+    });
+
+    it('collapseWhitespace removes all whitespace characters from a string.', () => {
+        assert.equal(stringUtils.collapseWhitespace('Hello   World!'), "HelloWorld!");
+    });
+
+    it('getCharacterType determines the type of a character (uppercase, lowercase, digit, etc.).', () => {
+        assert.equal(stringUtils.getCharacterType('A'), "uppercase");
+    });
+
+    it('getCharacterCode retrieves the Unicode code point of a character.', () => {
+        assert.equal(stringUtils.getCharacterCode('A'), 65);
+    });
+
+    it('padWithContent pads a string with a specified content to achieve a desired length.', () => {
+        assert.equal(stringUtils.padWithContent('Hello', '*', 10), "**Hello***");
+    });
+
+    it('convertToCamelCase converts a string to camel case format.', () => {
+        assert.equal(stringUtils.convertToCamelCase('hello-world'), "helloWorld");
+    });
+
+    it('convertToSnakeCase converts a string to snake case format.', () => {
+        assert.equal(stringUtils.convertToSnakeCase('helloWorld'), "hello_world");
+    });
+
+    it('wrapText wraps a long text string into multiple lines with a specified maximum width.', () => {
+        assert.strictEqual(
+            stringUtils.wrapText('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 20),
+            `Lorem ipsum dolor sit
+amet, consectetur
+adipiscing elit.`
+        );
+    });
+
 });

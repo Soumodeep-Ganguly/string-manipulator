@@ -57,4 +57,64 @@ module.exports.encodeBase64 = (str) => btoa(str);
 
 module.exports.decodeBase64 = (str) => atob(str);
 
-console.log('apple,orange,banana'.split(','))
+module.exports.matchRegex = (str, regex) => str.match(regex);
+
+module.exports.replaceRegex = (str, regex, replacement) => str.replace(regex, replacement);
+
+module.exports.encodeURIComponent = (str) => encodeURIComponent(str);
+
+module.exports.decodeURIComponent = (encodedStr) => decodeURIComponent(encodedStr);
+
+module.exports.getPathFromURL = (url) => new URL(url).pathname;
+
+module.exports.compareStrings = (str1, str2) => str1.localeCompare(str2);
+
+module.exports.equalsIgnoreCase = (str1, str2) => str1.toLowerCase() === str2.toLowerCase();
+
+module.exports.formatString = (format, ...values) => format.replace(/\{(\d+)\}/g, (_, index) => values[index]);
+
+module.exports.getUnicodeCodePointAt = (str, index) => str.codePointAt(index);
+
+module.exports.convertToUnicode = (str) => [...str].map((char) => `U+${char.codePointAt(0).toString(16)}`).join(' ');
+
+module.exports.truncateText = (str, maxLength, ellipsis = '...') => str.length > maxLength ? str.slice(0, maxLength) + ellipsis : str;
+
+module.exports.normalizeWhitespace = (str) => str.replace(/\s+/g, ' ');
+
+module.exports.collapseWhitespace = (str) => str.replace(/\s/g, '');
+
+module.exports.getCharacterType = (char) => {
+    if (/[A-Z]/.test(char)) return 'uppercase';
+    if (/[a-z]/.test(char)) return 'lowercase';
+    if (/\d/.test(char)) return 'digit';
+    return 'other';
+}
+
+module.exports.getCharacterCode = (char) => char.codePointAt(0);
+
+module.exports.padWithContent = (str, padContent, totalLength) => str.padStart((totalLength + str.length) / 2, padContent).padEnd(totalLength, padContent);
+
+module.exports.convertToCamelCase = (str) => str.replace(/[-_]+(.)?/g, (_, char) => (char ? char.toUpperCase() : ''));
+
+module.exports.convertToSnakeCase = (str) => str.replace(/([a-z])([A-Z])/g, '$1_$2').replace(/[-\s]/g, '_').toLowerCase();
+
+module.exports.wrapText = (text, maxWidth) => {
+    const words = text.split(' ');
+    let line = '';
+    const lines = [];
+
+    words.forEach((word) => {
+      if (line.length + word.length <= maxWidth) {
+        line += (line === '' ? '' : ' ') + word;
+      } else {
+        lines.push(line);
+        line = word;
+      }
+    });
+
+    if (line !== '') {
+      lines.push(line);
+    }
+
+    return lines.join('\n');
+}
