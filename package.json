@@ -1,7 +1,7 @@
 {
   "name": "string-transformation",
-  "version": "2.0.0",
-  "description": "Makes working with strings easy.",
+  "version": "2.1.0",
+  "description": "Makes working with strings easy and also provide uuid.",
   "main": "index.js",
   "scripts": {
     "test": "npx mocha test/test.js"
@@ -12,11 +12,16 @@
   },
   "keywords": [
     "npm",
+    "string",
+    "number",
     "string transformation",
+    "string transformations",
     "string manipulator",
     "string formatter",
     "string format",
-    "string manupulation"
+    "string manupulation",
+    "string manupulations",
+    "uuid"
   ],
   "author": "Soumodeep-Ganguly",
   "license": "MIT",

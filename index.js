@@ -118,3 +118,47 @@ module.exports.wrapText = (text, maxWidth) => {
 
     return lines.join('\n');
 }
+
+module.exports.uuid = () => {
+  const randomHex = () => Math.floor(Math.random() * 16).toString(16); // Helper function to generate a random hexadecimal digit
+
+  const segments = [8, 4, 6, 4, 10]; // An array defining the number of hexadecimal digits in each UUID segment
+  
+  // Using 'map' to create an array of UUID parts
+  const uuidParts = segments.map(segment => { 
+      let part = '';
+      for (let i = 0; i < segment; i++) {
+          part += randomHex();
+      }
+      return part; // Adding the generated part to the UUID parts array
+  });
+
+  // Joining the UUID parts with dashes to create the final UUID
+  return `${uuidParts[0]}-${uuidParts[1]}-${uuidParts[2]}-${uuidParts[3]}-${uuidParts[4]}`;
+}
+
+module.exports.uuidNumber = () => {
+  // Get current timestamp as milliseconds since Unix epoch
+  const timestamp = new Date().getTime();
+
+  // Generate a random component
+  const randomComponent = Math.floor(Math.random() * 0x1000000000000);
+
+  // Construct the UUID in the "8-4-4-4-12" format
+  const uuid = `${(timestamp & 0xffffffff) >>> 0}-${((timestamp >> 32) & 0xffff) >>> 0}-1${((timestamp >> 48) & 0xfff) >>> 0}-${(randomComponent & 0xffff) >>> 0}-${(randomComponent >> 32) >>> 0}`;
+
+  return uuid;
+}
+
+module.exports.uuidDateTime = () => {
+  // Get current timestamp in 100-nanosecond intervals since October 15, 1582
+  const timestamp = (new Date().getTime() * 10000) + 122192928000000000;
+
+  // Generate a random 12-digit timestamp-based identifier
+  const timestampIdentifier = Math.floor(Math.random() * 0x10000000000);
+
+  // Format timestamp and timestamp identifier into UUID format
+  const uuid = `${timestamp.toString(16)}-${timestampIdentifier.toString(16)}-1${timestamp.toString(16).substr(1, 3)}-9234-0123456789ab`;
+
+  return uuid;
+}

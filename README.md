@@ -27,7 +27,7 @@ stringLength('Hello, World!');
 ```
 
 **Output:**
-```javascript
+```plaintext
 13
 ```
 
@@ -41,7 +41,7 @@ convertToUpperCase('hello');
 ```
 
 **Output:**
-```javascript
+```plaintext
 HELLO
 ```
 
@@ -55,7 +55,7 @@ convertToLowerCase('WORLD');
 ```
 
 **Output:**
-```javascript
+```plaintext
 world
 ```
 
@@ -69,7 +69,7 @@ capitalizeFirstLetter('hello world!');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Hello world!
 ```
 
@@ -83,7 +83,7 @@ convertToTitleCase('this is a test sentence');
 ```
 
 **Output:**
-```javascript
+```plaintext
 This Is A Test Sentence
 ```
 
@@ -97,7 +97,7 @@ getSubstring('abcdef', 1, 4);
 ```
 
 **Output:**
-```javascript
+```plaintext
 bcd
 ```
 
@@ -111,7 +111,7 @@ trimWhitespace('   Hello, World!   ');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Hello, World!
 ```
 
@@ -125,7 +125,7 @@ trimLeft('   Leading whitespace');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Leading whitespace
 ```
 
@@ -139,7 +139,7 @@ trimRight('Trailing whitespace   ');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Trailing whitespace
 ```
 
@@ -153,7 +153,7 @@ replaceCharacter('banana', 'a', 'o');
 ```
 
 **Output:**
-```javascript
+```plaintext
 bonono
 ```
 
@@ -167,7 +167,7 @@ removeCharacter('banana', 'a');
 ```
 
 **Output:**
-```javascript
+```plaintext
 bnn
 ```
 
@@ -181,7 +181,7 @@ splitString('apple,orange,banana', ',');
 ```
 
 **Output:**
-```javascript
+```plaintext
 [ 'apple', 'orange', 'banana' ]
 ```
 
@@ -195,7 +195,7 @@ joinStrings(['apple', 'orange', 'banana'], ', ');
 ```
 
 **Output:**
-```javascript
+```plaintext
 apple, orange, banana
 ```
 
@@ -209,7 +209,7 @@ firstOccurrence('programming', 'g');
 ```
 
 **Output:**
-```javascript
+```plaintext
 3
 ```
 
@@ -223,7 +223,7 @@ findAllOccurrences('banana', 'a');
 ```
 
 **Output:**
-```javascript
+```plaintext
 [1, 3, 5]
 ```
 
@@ -237,7 +237,7 @@ replaceSubstring('hello world', 'world', 'there');
 ```
 
 **Output:**
-```javascript
+```plaintext
 hello there
 ```
 
@@ -251,7 +251,7 @@ replaceWhitespaceWith('Hello    World!', '-');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Hello----World!
 ```
 
@@ -265,7 +265,7 @@ padLeft('42', '0', 5);
 ```
 
 **Output:**
-```javascript
+```plaintext
 00042
 ```
 
@@ -279,7 +279,7 @@ padRight('42', '0', 5);
 ```
 
 **Output:**
-```javascript
+```plaintext
 42000
 ```
 
@@ -293,7 +293,7 @@ reverseString('world');
 ```
 
 **Output:**
-```javascript
+```plaintext
 dlrow
 ```
 
@@ -307,7 +307,7 @@ isPalindrome('racecar');
 ```
 
 **Output:**
-```javascript
+```plaintext
 true
 ```
 
@@ -321,7 +321,7 @@ isNumeric('42.5');
 ```
 
 **Output:**
-```javascript
+```plaintext
 true
 ```
 
@@ -335,7 +335,7 @@ encodeBase64('Hello, World!');
 ```
 
 **Output:**
-```javascript
+```plaintext
 SGVsbG8sIFdvcmxkIQ==
 ```
 
@@ -349,7 +349,7 @@ decodeBase64('SGVsbG8sIFdvcmxkIQ==');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Hello, World!
 ```
 
@@ -363,7 +363,7 @@ matchRegex('abc123def456', /\d+/g);
 ```
 
 **Output:**
-```javascript
+```plaintext
 ["123", "456"]
 ```
 
@@ -377,7 +377,7 @@ replaceRegex('abc123def456', /\d+/g, 'X');
 ```
 
 **Output:**
-```javascript
+```plaintext
 abcXdefX
 ```
 
@@ -391,7 +391,7 @@ encodeURIComponent('Hello, World!');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Hello%2C%20World!
 ```
 
@@ -405,7 +405,7 @@ decodeURIComponent('Hello%2C%20World%21');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Hello, World!
 ```
 
@@ -419,7 +419,7 @@ getPathFromURL('https://example.com/path/file.html');
 ```
 
 **Output:**
-```javascript
+```plaintext
 /path/file.html
 ```
 
@@ -433,7 +433,7 @@ compareStrings('apple', 'banana');
 ```
 
 **Output:**
-```javascript
+```plaintext
 -1
 ```
 
@@ -447,7 +447,7 @@ equalsIgnoreCase('hello', 'Hello');
 ```
 
 **Output:**
-```javascript
+```plaintext
 true
 ```
 
@@ -461,7 +461,7 @@ formatString('Hello, {0}!', 'World');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Hello, World!
 ```
 
@@ -471,7 +471,7 @@ formatString('Hello {0}, Hello {1}!', 'there', 'World');
 ```
 
 **Output:**
-```javascript
+```plaintext
 Hello there, Hello World!
 ```
 
@@ -485,7 +485,7 @@ getUnicodeCodePointAt('A', 0);
 ```
 
 **Output:**
-```javascript
+```plaintext
 65
 ```
 
@@ -499,7 +499,7 @@ convertToUnicode('Hello');
 ```
 
 **Output:**
-```javascript
+```plaintext
 U+48 U+65 U+6c U+6c U+6f
 ```
 
@@ -513,7 +513,7 @@ truncateText('Lorem ipsum dolor sit amet', 15);
 ```
 
 **Output:**
-```javascript
+```plaintext
 Lorem ipsum dol...
 ```
 
@@ -527,7 +527,7 @@ normalizeWhitespace('  Hello    World!   ');
 ```
 
 **Output:**
-```javascript
+```plaintext
  Hello World! 
 ```
 
@@ -541,7 +541,7 @@ collapseWhitespace('Hello   World!');
 ```
 
 **Output:**
-```javascript
+```plaintext
 HelloWorld! 
 ```
 
@@ -555,7 +555,7 @@ getCharacterType('A');
 ```
 
 **Output:**
-```javascript
+```plaintext
 uppercase 
 ```
 
@@ -569,7 +569,7 @@ getCharacterCode('A');
 ```
 
 **Output:**
-```javascript
+```plaintext
 65 
 ```
 
@@ -583,7 +583,7 @@ padWithContent('Hello', '*', 10);
 ```
 
 **Output:**
-```javascript
+```plaintext
 **Hello***
 ```
 
@@ -597,7 +597,7 @@ convertToCamelCase('hello-world');
 ```
 
 **Output:**
-```javascript
+```plaintext
 helloWorld
 ```
 
@@ -611,7 +611,7 @@ convertToSnakeCase('helloWorld');
 ```
 
 **Output:**
-```javascript
+```plaintext
 hello_world
 ```
 
@@ -625,8 +625,50 @@ wrapText('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 20);
 ```
 
 **Output:**
-```javascript
+```plaintext
 Lorem ipsum dolor sit
 amet, consectetur
 adipiscing elit.
+```
+
+### `uuid()`
+
+Provide uuid for (Universally Unique IDentifier).
+
+**Input:**
+```javascript
+uuid();
+```
+
+**Output:**
+```plaintext
+28d921a6-fc82-2dcf79-8244-c7112d52af
+```
+
+### `uuidNumber()`
+
+Provide uuid which only consist of numbers.
+
+**Input:**
+```javascript
+uuidNumber();
+```
+
+**Output:**
+```plaintext
+500879049-52937-13546-19988-1519210004
+```
+
+### `uuidDateTime()`
+
+Provide uuid based on Date and Time.
+
+**Input:**
+```javascript
+uuidDateTime();
+```
+
+**Output:**
+```plaintext
+1ee41006916c750-faba78b560-1ee4-9234-0123456789ab
 ```
