@@ -1,7 +1,14 @@
 # String Transformation
 
 A JavaScript module for performing various string transformation tasks.
-To install this module run command `npm i string-transformation`
+To install this module run command 
+
+```plaintext
+npm i string-transformation
+```
+
+**Current Features**
+[![Badge](https://img.shields.io/badge/string%20functions-Click-brightgreen)](#string)  [![Badge](https://img.shields.io/badge/uuid-Click-brightgreen)](#uuid) 
 
 ## Import Module
 ```javascript
@@ -16,6 +23,8 @@ const { stringLength } = require('string-transformation');
 ```
 
 ## Functions
+
+<a id="string"></a>
 
 ### `stringLength(str)`
 
@@ -630,6 +639,8 @@ Lorem ipsum dolor sit
 amet, consectetur
 adipiscing elit.
 ```
+
+<a id="uuid"></a>
 
 ### `uuid()`
 
